@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-div">
+      <div class="sidebar sidebar--server">
+        <!-- Servers will be dynamically added here -->
+      </div>
+      <div class="channels-section">
+        <div class="channels-section_Banner">
+          <img src="" alt="" />
+        </div>
+        <div class="channels-section_channel">
+          <!-- Channels will be dynamically added here -->
+        </div>
+      </div>
+      <div class="messages-section">
+        <ul id="messages-list">
+          <!-- Messages will be dynamically added here -->
+        </ul>
+      </div>
+      <div class="details-section">
+        <div class="details-section__tabs">
+          <div class="details-section__tab" onclick="openTab('login')">
+            Login
+          </div>
+          <div id="login" class="details-section__content">
+            <h2>Login</h2>
+            <form id="login-form">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required />
+              <br />
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required />
+              <br />
+              <button type="submit" id="submit">Login</button>
+            </form>
+          </div>
+
+          <div class="details-section__tab" onclick="openTab('server')">
+            Server Details
+          </div>
+          <div id="server" class="details-section__content">
+            <h2>Server Details</h2>
+            <p>These are server details.</p>
+          </div>
+
+          <div class="details-section__tab" onclick="openTab('blocked')">
+            Blocked Users
+          </div>
+          <div id="blocked" class="details-section__content">
+            <h2>Blocked Users</h2>
+            <p>List of blocked users.</p>
+          </div>
+
+          <div class="details-section__tab" onclick="openTab('download')">
+            Download
+          </div>
+          <div id="download" class="details-section__content">
+            <h2>Download</h2>
+            <button id="get-all-messages">
+              Get All Messages with all details
+            </button>
+            <button id="get-all-messages-less-details">
+              Get All Messages with less details
+            </button>
+            <button id="get-all-pictures">
+              Download all the picture of this channel
+            </button>
+            <button id="stop-getting-all-messages">Stop The Download</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
